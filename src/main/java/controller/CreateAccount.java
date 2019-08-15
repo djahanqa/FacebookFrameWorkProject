@@ -10,11 +10,26 @@ public class CreateAccount extends ScriptBase {
     @FindBy (xpath = "//*[@name='firstname']")
     WebElement firstname;
 
+    @FindBy(xpath = "//*[@name='lastname']")
+    WebElement lastname;
+
+    @FindBy (id= "u_0_j")
+    WebElement email;
+
+    @FindBy(id="u_0_m")
+    WebElement reEmail;
+
+
+
+
     public CreateAccount(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
-public void creatingAccount(String fname){
+public void creatingAccount(String fname,String lname,String emailAddress,String reEmailAddress){
 
         firstname.sendKeys(fname);
+        lastname.sendKeys(lname);
+        email.sendKeys(emailAddress);
+        reEmail.sendKeys(reEmailAddress);
 }
 }

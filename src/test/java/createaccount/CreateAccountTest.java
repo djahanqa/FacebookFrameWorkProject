@@ -21,7 +21,7 @@ public class CreateAccountTest extends ScriptBase{
         @Test
         public void varifycreatingAccount() {
             createAccount = new CreateAccount(driver);
-            createAccount.creatingAccount("mohshina");
+            createAccount.creatingAccount("moh","shina","mohshina_huda79@yahoo.com","mohshina_huda79@yahoo.com");
         }
 
         @AfterTest
